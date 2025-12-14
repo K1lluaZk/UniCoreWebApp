@@ -7,9 +7,10 @@
 </head>
 <body>
     <h1>Contáctenos</h1>
-    <form action="/contact/" method="post"> {% csrf_token %}
-        <p>Asunto: <input type="text" name"txtAsunto"/></p>
-        <p>Email: <input type="email" name"txtEmail"> </p>
+    <form action="/contact/" method="post"> 
+        {% csrf_token %}
+        <p>Asunto: <input type="text" name="txtAsunto"/></p>
+        <p>Email: <input type="email" name="txtEmail"/> </p>
         <p>
 	    Mensaje: <textarea name="txtMensaje" rows="5" cols="30" style="resize: none;"></textarea> 
 	</p>
