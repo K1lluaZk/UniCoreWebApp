@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiénes somos | UniCore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #111827;
+            --primary: #38bdf8;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            background: radial-gradient(circle at top, #111827, var(--bg));
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 12px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 70px;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .sections {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .info-card {
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.03),
+                rgba(255, 255, 255, 0.01)
+            );
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 34px 28px;
+            position: relative;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(6px);
+        }
+
+        .info-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(56, 189, 248, 0.12),
+                transparent
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .info-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .info-card:hover::after {
+            opacity: 1;
+        }
+
+        .info-card h3 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            font-size: 1.35rem;
+        }
+
+        .info-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* Botón superior */
+
+        .top-action {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 100;
+        }
+
+        .top-action a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .top-action a:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(17, 24, 39, 0.95);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón volver -->
+    <div class="top-action">
+        <a href="/"><span>←</span><span>Inicio</span></a>
+    </div>
+
+    <div class="container">
+        <h1>Quiénes somos</h1>
+        <p class="subtitle">
+            UniCore nace de una idea simple:  
+            la gestión académica debe ser clara, coherente y humana.  
+            Menos burocracia. Más control.
+        </p>
+
+        <div class="sections">
+
+            <div class="info-card">
+                <h3>Nuestra Esencia</h3>
+                <p>
+                    UniCore es una plataforma web diseñada para centralizar y optimizar
+                    la administración académica. Integra carreras, cursos, estudiantes,
+                    profesores y materias en un solo sistema sólido y confiable.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Nuestra Visión</h3>
+                <p>
+                    Aspiramos a convertirnos en un núcleo tecnológico que eleve la forma
+                    en que las instituciones educativas gestionan su información,
+                    reduciendo errores y aumentando la eficiencia operativa.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Nuestra Misión</h3>
+                <p>
+                    Diseñar soluciones claras, seguras y escalables que permitan a
+                    instituciones educativas tomar decisiones informadas y mantener
+                    el control total de su ecosistema académico.
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>Nuestro Compromiso</h3>
+                <p>
+                    Construir software con criterio, atención al detalle y respeto
+                    por el usuario final. Sin improvisaciones. Sin complejidad innecesaria.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

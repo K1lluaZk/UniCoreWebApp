@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Servicios | UniCore</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #111827;
+            --primary: #38bdf8;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", system-ui, sans-serif;
+            background: radial-gradient(circle at top, #111827, var(--bg));
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        h1 {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 10px;
+            letter-spacing: -1px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: var(--muted);
+            margin-bottom: 60px;
+            font-size: 1.05rem;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: linear-gradient(
+                180deg,
+                rgba(255, 255, 255, 0.03),
+                rgba(255, 255, 255, 0.01)
+            );
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 30px 26px;
+            position: relative;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(6px);
+        }
+
+        .service-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 18px;
+            background: linear-gradient(
+                120deg,
+                transparent,
+                rgba(56, 189, 248, 0.12),
+                transparent
+            );
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(56, 189, 248, 0.4);
+        }
+
+        .service-card:hover::after {
+            opacity: 1;
+        }
+
+        .service-card h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.25rem;
+        }
+
+        .service-card p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.6;
+        }
+
+        /* Botón flotante */
+
+        .top-action {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            z-index: 100;
+        }
+
+        .top-action a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            background: rgba(17, 24, 39, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            text-decoration: none;
+            color: var(--text);
+            font-size: 0.95rem;
+            backdrop-filter: blur(8px);
+            transition: all 0.3s ease;
+        }
+
+        .top-action a:hover {
+            border-color: rgba(56, 189, 248, 0.4);
+            background: rgba(17, 24, 39, 0.95);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Botón volver -->
+    <div class="top-action">
+        <a href="/"><span>←</span><span>Inicio</span></a>
+    </div>
+
+    <div class="container">
+        <h1>Servicios</h1>
+        <p class="subtitle">
+            UniCore centraliza, ordena y simplifica la gestión académica.  
+            Todo en un solo núcleo. Sin fricción.
+        </p>
+
+        <div class="services">
+
+            <div class="service-card">
+                <h3>Gestión de Carreras</h3>
+                <p>
+                    Administración estructurada de las carreras académicas, 
+                    permitiendo definir su duración, organización y relación con materias y cursos.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión de Cursos</h3>
+                <p>
+                    Control preciso de los cursos impartidos, su asignación a carreras
+                    y su vinculación directa con estudiantes y profesores.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión de Estudiantes</h3>
+                <p>
+                    Registro y seguimiento de estudiantes, garantizando trazabilidad académica,
+                    pertenencia a cursos y correcta organización institucional.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión de Usuarios</h3>
+                <p>
+                    Administración de accesos al sistema, roles y permisos,
+                    asegurando un uso controlado y seguro de la plataforma.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión de Grupos</h3>
+                <p>
+                    Organización de estudiantes en grupos académicos,
+                    facilitando la asignación por curso, materia o periodo.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión de Profesores</h3>
+                <p>
+                    Registro y control del personal docente, 
+                    vinculando profesores con cursos, materias y grupos asignados.
+                </p>
+            </div>
+
+            <div class="service-card">
+                <h3>Gestión de Materias</h3>
+                <p>
+                    Definición y administración de materias académicas,
+                    integradas de forma coherente dentro de carreras y cursos.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
