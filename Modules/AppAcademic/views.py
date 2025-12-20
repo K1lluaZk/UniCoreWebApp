@@ -4,8 +4,8 @@ from django.conf import settings
 
 # Create your views here.
 
-
-
+def home(request):
+    return render(request, "home.html")
 
 def contactForm(request):
     return render(request, "contactform.html")
@@ -19,10 +19,6 @@ def contact(request):
         send_mail(asunto, mensaje, email_desde, email_para, fail_silently=False)
         return render(request, "successFulContact.html")
     return render(request, "contactForm.html")
-
-def home(request):
-    return render(request, "home.html")
-
 
 def services(request):
     return render(request, "services.html")
