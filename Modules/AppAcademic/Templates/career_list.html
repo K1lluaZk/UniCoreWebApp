@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Carreras</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+        }
+
+        h1 {
+            margin-bottom: 15px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #ffffff;
+        }
+
+        th, td {
+            padding: 10px;
+            border: 1px solid #dcdcdc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #2c3e50;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        .back {
+            margin-top: 15px;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Carreras Registradas</h1>
+
+    {% if careers %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Nombre</th>
+                    <th>Duración (años)</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for career in careers %}
+                <tr>
+                    <td>{{ career.code }}</td>
+                    <td>{{ career.name }}</td>
+                    <td>{{ career.duration }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay carreras registradas.</p>
+    {% endif %}
+
+    <a class="back" href="/user/">← Volver al panel</a>
+
+</body>
+</html>
