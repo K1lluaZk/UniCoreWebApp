@@ -9,7 +9,7 @@
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](LICENSE)
 [![Made in RD](https://img.shields.io/badge/Made%20in-Rep%C3%BAblica%20Dominicana-002D62?style=for-the-badge&logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg==)](https://github.com/K1lluaZk)
 
-[🌐 Ver Demo en Vivo](#) • [📝 Reportar Bug](https://github.com/K1lluaZk/UniCore/issues) • [✨ Solicitar Feature](https://github.com/K1lluaZk/UniCore/issues/new)
+[🌐 Ver Demo en Vivo](#) • [📝 Reportar Bug](https://github.com/K1lluaZk/UniCoreWebApp/issues) • [✨ Solicitar Feature](https://github.com/K1lluaZk/UniCoreWebApp/issues/new)
 
 </div>
 
