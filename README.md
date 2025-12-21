@@ -410,8 +410,8 @@ copies of the Software...
 
 Si este proyecto te fue útil, ¡dale una ⭐ en GitHub!
 
-[![GitHub stars](https://img.shields.io/github/stars/K1lluaZk/UniCore?style=social)](https://github.com/K1lluaZk/UniCore/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/K1lluaZk/UniCore?style=social)](https://github.com/K1lluaZk/UniCore/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/K1lluaZk/UniCore?style=social)](https://github.com/K1lluaZk/UniCoreWebApp/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/K1lluaZk/UniCore?style=social)](https://github.com/K1lluaZk/UniCoreWebApp/network/members)
 
 ---
 
